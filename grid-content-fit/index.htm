@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <h2>fit-content(50px)</h2>
+    <div class="container fit-content-grid">
+        <div><img src="https://placehold.co/80x80" alt="image placeholder"></div>
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+   </div>
+    <hr>
+    <h2>fit-content(50px) with image removed using JS</h2>
+    <h3>(This should leave 50px in the first cell, but it is still an experimental CSS function.)</h3>
+   <div class="container fit-content-grid">
+        <div><img class="imageToRemove" src="https://placehold.co/80x80" alt="image placeholder"></div>
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+   </div>
+    <hr>
+    <h2>max-content with image removed using JS</h2>
+    <div class="container fit-content-grid-w-maxcontent">
+        <div><img class="imageToRemove" src="https://placehold.co/80x80" alt="image placeholder"></div>
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+    </div>
+    <hr>
+    <h2>grid-template-columns all 1fr</h2>
+    <div class="container fit-content-fr">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+    </div>
+    <hr>
+    <h2>grid-template-columns all auto</h2>
+    <div class="container fit-content-auto">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+    </div>
+    <hr>
+    <h2>grid-template-columns: auto 1fr 3fr</h2>
+    <h3>(The auto column just fits what's in it.)</h3>
+    <div class="container fit-content-auto-and-fr">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+    </div>
+    <hr>
+    <h2>grid-template-columns both auto and fr</h2>
+    <h3>(Again auto fits what is in it and the other two are fractional.)</h3>
+    <div class="container fit-content-auto-and-fr">
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Temporibus, voluptatum maiores similique consequuntur rem 
+            accusamus fugit eos perferendis, repellendus iste provident, 
+            ex culpa reiciendis fuga.
+        </div>
+        <div>small text</div>
+        <div>shorter</div>
+    </div>
+    <hr>
+    <h2>grid-template-columns: minmax(50px, min-content) 1fr 3fr</h2>
+    <h3>(We are applying  word-break: break-all here)</h3>
+    <div class="container fit-content-minmax-w-fr">
+        <div>Hello World!</div>
+        <div>Some other columnn!</div>
+        <div>Some other column!</div>
+    </div>
+    <hr>
+    <h2>grid-template-columns: minmax(50px, min-content) 1fr 3fr</h2>
+    <h3>(We are applying  word-break: break-all here this time with a larger image)</h3>
+    <div class="container fit-content-minmax-w-fr">
+        <div><img src="https://placehold.co/150x150" alt=""></div>
+        <div>Some other column!</div>
+        <div>Some other column!</div>
+    </div>
+<script src="scripts/main.js"></script>
+</body>
+</html>

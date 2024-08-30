@@ -1,0 +1,59 @@
+:root {
+    --container-size: 520px;
+}
+.grid-1fr{
+    width: 200px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 
+    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+    ;
+    gap: 5px;
+}
+.grid-10px{
+    width: 100vw;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 10px 10px 10px 10px 10px 10px 10px 10px;
+    grid-template-rows: 
+    10px 10px 10px 10px 10px 10px 10px 10px
+    10px 10px 10px 10px 10px 10px 10px 10px
+    ;
+    gap: 5px;
+}
+.grid-repeat-10px{
+    width: 100vw;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(8, 10px);
+    grid-template-rows: repeat( 16, 10px);
+    gap: 5px;
+}
+.grid-repeating-pattern{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 20px 10px);
+    grid-template-rows: repeat(3, 20px 10px);
+    gap: 10px
+}
+.grid-repeating-autofit{
+    border: 2px solid red;
+    width: 750px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, 100px);
+    grid-template-rows: repeat( auto-fit, 100px);
+}
+.grid-repeating-autofill{
+    border: 2px solid red;
+    width: 750px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, 100px);
+    grid-template-rows: repeat( auto-fill, 100px);
+}
+.container > div{
+    border: 1px dotted red;
+}
