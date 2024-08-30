@@ -1,0 +1,31 @@
+:root {
+    --container-size: 520px;
+}
+.container{
+    display:grid;
+    width: var(--container-size);
+    height: var(--container-size);
+    grid-template-columns:  repeat(5, 100px);
+    grid-template-rows:  repeat( 4, 100px);
+    gap: 5px;
+    /* grid-auto-flow: row; */
+    /* grid-auto-flow: row dense;  */
+    /* grid-auto-flow: column dense; */
+    grid-auto-flow: dense;
+}
+.container > div{
+    display: flex;
+    background-color: darkblue;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.small{
+
+}
+.large{
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}

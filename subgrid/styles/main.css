@@ -1,0 +1,104 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-size: 2.25vw;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/* CSS RESET: End */
+section{
+    margin: 1rem;
+}
+h2{
+    font-family: Oswald;
+    font-weight: bold;
+    padding: .5rem 0;
+}
+hr{
+    width: 80%;
+    border-top: 1px dotted #d7d7d7;
+    margin: 2rem auto;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat( 6, 1fr);
+    grid-template-rows: [card-start] 1fr .1fr .25fr [card-end];
+    column-gap: 1vw;
+
+}
+.card-item{
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: card-start / card-end;
+    background-color:rgb(216, 216, 216);
+    border-radius: .25rem;
+    border: 1px solid #cecece;
+}
+.section-1 .card-item{
+    background-color: #2f9fbd;
+}
+.section-2 .card-item{
+    background-color: #dd63e1;
+}
+.card-item img{
+    padding: .25rem;
+    width: calc(100% - .5rem);
+}
+.card-item h3{
+    background-color:white;
+    padding: .25rem;
+    font-family: Roboto Slab;
+    font-size: 2vw;
+}
+.card-item p{
+    background-color:white;
+    font-family: Roboto;
+    padding: .25rem;
+    font-size: 1vw;
+}
